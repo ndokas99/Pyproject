@@ -1,0 +1,232 @@
+1
+0:00:00.000 --> 0:00:00.500
+boom boom
+
+2
+0:00:00.500 --> 0:00:01.000
+......
+
+3
+0:00:01.000 --> 0:00:01.500
+......
+
+4
+0:00:01.500 --> 0:00:04.620
+Hey, everybody. How's it going? In this video, we're going to be learning about Python decorators.
+
+5
+0:00:04.620 --> 0:00:06.620
+We're going to be learning how decorators work,
+
+6
+0:00:06.620 --> 0:00:08.340
+and also when you would want to use them.
+
+7
+0:00:08.340 --> 0:00:11.120
+Ah, so, decorators are a slightly more advanced topic,
+
+8
+0:00:11.120 --> 0:00:13.120
+but we're going to walk through a few different
+
+9
+0:00:13.120 --> 0:00:16.120
+examples so that we can understand exactly what's going on.
+
+10
+0:00:16.120 --> 0:00:17.900
+Now, if you haven't watched my
+
+11
+0:00:17.900 --> 0:00:20.300
+videos on closures or first-class functions,
+
+12
+0:00:20.300 --> 0:00:23.240
+then you should probably give those videos a watch,
+
+13
+0:00:23.240 --> 0:00:28.760
+because they will explain a lot of the underlying concepts that I'm not going to spend a lot of time on here.
+
+14
+0:00:28.760 --> 0:00:31.400
+And I'll put a link to those videos in the comments section below.
+
+15
+0:00:31.400 --> 0:00:33.260
+But if you haven't seen those videos,
+
+16
+0:00:33.260 --> 0:00:35.800
+then let me just give a really quick summary.
+
+17
+0:00:35.800 --> 0:00:37.720
+Ah, so, first-class functions.
+
+18
+0:00:37.720 --> 0:00:39.400
+First-class functions allow us to
+
+19
+0:00:39.400 --> 0:00:42.180
+treat functions like any other object.
+
+20
+0:00:42.180 --> 0:00:43.220
+So, for example,
+
+21
+0:00:43.220 --> 0:00:45.180
+we can pass functions as arguments
+
+22
+0:00:45.180 --> 0:00:46.780
+to another function.
+
+23
+0:00:46.780 --> 0:00:48.640
+We can return functions.
+
+24
+0:00:48.640 --> 0:00:51.180
+And we can assign functions to variables.
+
+25
+0:00:51.180 --> 0:00:55.320
+Now, closures allow us to take advantage of first-class functions,
+
+26
+0:00:55.320 --> 0:00:57.320
+and return an inner function
+
+27
+0:00:57.320 --> 0:00:59.960
+that remembers and has access to
+
+28
+0:00:59.960 --> 0:01:03.500
+variables local to the scope in which they were created.
+
+29
+0:01:03.500 --> 0:01:06.140
+Now, if both of those definitions sound a little confusing,
+
+30
+0:01:06.140 --> 0:01:08.940
+then let's go ahead and take a look at a quick example here.
+
+31
+0:01:08.940 --> 0:01:11.220
+And again, I'm not going to go as in-depth
+
+32
+0:01:11.220 --> 0:01:12.740
+as I do in those
+
+33
+0:01:12.740 --> 0:01:13.480
+videos.
+
+34
+0:01:13.480 --> 0:01:15.480
+Ah, but let's just do a quick recap.
+
+35
+0:01:15.480 --> 0:01:16.100
+......
+
+36
+0:01:16.100 --> 0:01:19.680
+So, we have an  outer function here that doesn't take any parameters.
+
+37
+0:01:19.680 --> 0:01:21.300
+And within our outer function,
+
+38
+0:01:21.300 --> 0:01:24.060
+we have a local variable called &quot;message&quot;.
+
+39
+0:01:24.060 --> 0:01:27.300
+Ah, then we are creating an inner function
+
+40
+0:01:27.300 --> 0:01:29.120
+within the outer function.
+
+41
+0:01:29.120 --> 0:01:30.820
+Now, the &quot;message&quot; variable
+
+42
+0:01:30.820 --> 0:01:33.040
+wasn't created within the inner function,
+
+43
+0:01:33.040 --> 0:01:34.820
+but the inner function does
+
+44
+0:01:34.820 --> 0:01:35.720
+have access to it,
+
+45
+0:01:35.720 --> 0:01:38.300
+and this is what we call a free variable.
+
+46
+0:01:38.300 --> 0:01:39.840
+Now, all our inner function does
+
+47
+0:01:39.840 --> 0:01:41.720
+is print this message.
+
+48
+0:01:41.720 --> 0:01:44.100
+Then we are executing our inner function
+
+49
+0:01:44.100 --> 0:01:46.020
+and returning the result.
+
+50
+0:01:46.020 --> 0:01:47.680
+So now, if I execute this
+
+51
+0:01:47.680 --> 0:01:50.420
+outer function, here, and run this code,
+
+52
+0:01:50.420 --> 0:01:51.980
+what it does, is it comes in here
+
+53
+0:01:51.980 --> 0:01:53.980
+to this outer function,
+
+54
+0:01:53.980 --> 0:01:55.680
+sets this message variable,
+
+55
+0:01:55.680 --> 0:02:01.260
+ah, creates this inner function
+
+56
+0:02:01.260 --> 0:02:17.860
+so we can  see any outer function is
+
+57
+0:02:17.860 --> 0:02:20.980
+we can do that by taking
+
+58
+0:02:20.980 --> 0:02:59.980
+So now we
+
